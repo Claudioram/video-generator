@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    body {background-color: #eceff2}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="it"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Video Generator - AI&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-background: rgba(252, 252, 249, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-surface: rgba(255, 255, 253, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-text: rgba(19, 52, 59, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-text-secondary: rgba(98, 108, 113, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-primary: rgba(33, 128, 141, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-primary-hover: rgba(29, 116, 128, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-primary-active: rgba(26, 104, 115, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-secondary: rgba(94, 82, 64, 0.12);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-border: rgba(94, 82, 64, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-btn-primary-text: rgba(252, 252, 249, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-error: rgba(192, 21, 47, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-success: rgba(33, 128, 141, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--color-warning: rgba(168, 75, 47, 1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--font-size-base: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--space-8: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--space-16: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--space-20: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--space-32: 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--radius-base: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--radius-lg: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--duration-normal: 250ms;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>body { font-family: var(--font-family-base); margin: 0; background-color: var(--color-background); color: var(--color-text); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.video-generator-app { min-height: 100vh; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.app-header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: var(--space-20) 0; margin-bottom: var(--space-32); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.app-title { font-size: 1.5rem; text-align: center; margin: 0; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.container { max-width: 800px; margin: 0 auto; padding: 0 var(--space-16); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.step-content { padding: var(--space-16); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.step-header { text-align: center; margin-bottom: var(--space-32); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.step-title { font-size: 1.75rem; margin-bottom: var(--space-8); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.form-group { margin-bottom: var(--space-16); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.form-label { display: block; margin-bottom: var(--space-8); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.form-control { width: 100%; padding: var(--space-8); border: 1px solid var(--color-border); border-radius: var(--radius-base); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.description-textarea { min-height: 120px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.step-navigation { display: flex; justify-content: space-between; margin-top: var(--space-32); padding-top: var(--space-16); border-top: 1px solid var(--color-border); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.btn { padding: var(--space-8) var(--space-16); border: none; border-radius: var(--radius-base); cursor: pointer; font-size: 1rem; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.btn--primary { background-color: var(--color-primary); color: var(--color-btn-primary-text); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.btn--primary:disabled { opacity: 0.5; cursor: not-allowed; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.btn--outline { background-color: transparent; border: 1px solid var(--color-border); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.script-clips { display: flex; flex-direction: column; gap: var(--space-16); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.card { background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-16); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>/* Aggiungi altri stili necessari qui... */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="root"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script type="text/javascript"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>'use strict';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const e = React.createElement;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const { useState, useEffect } = React;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Per ora, disabilitiamo la chiamata a Kling per essere sicuri che l'interfaccia si carichi.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>async function callKlingAPI(promptText) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>console.log("Chiamata a Kling temporaneamente disabilitata per testare l'interfaccia.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Simula un errore per far apparire il messaggio corretto nell'interfaccia</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>await new Promise(resolve =&gt; setTimeout(resolve, 1000)); // Finge di lavorare</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return null;<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// La funzione per Gemini deve ancora funzionare, quindi ha bisogno della sua chiave.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>async function callGeminiAPI(videoDescription) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const GEMINI_API_KEY = "INCOLLA_QUI_LA_TUA_CHIAVE_API_DI_GEMINI";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (!GEMINI_API_KEY || GEMINI_API_KEY.includes("INCOLLA_QUI")) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>alert("Per favore, modifica questo file per inserire la chiave API di Gemini.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>return null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const API_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const prompt = `Crea 3 scene per un video su: "${videoDescription}". Rispondi solo con un array JSON con oggetti aventi 'id', 'text', 'duration'.`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const response = await fetch(API_ENDPOINT, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>method: 'POST',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>headers: { 'Content-Type': 'application/json' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (!response.ok) throw new Error(`Errore API Gemini`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const data = await response.json();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const generatedText = data.candidates[0].content.parts[0].text.replace(/```json|```/g, '').trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>return JSON.parse(generatedText);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>console.error("Errore durante la chiamata a Gemini:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>alert("Errore generazione sceneggiatura.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>return null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function VideoDescriptionStep({ setDescription, onNext, isLoading }) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return e(React.Fragment, null,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>e('div', { className: 'step-header' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('h2', { className: 'step-title' }, 'Descrivi il Video che Vuoi Creare')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>e('div', { className: 'description-form' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('div', { className: 'form-group' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>e('label', { htmlFor: 'video-desc' }, 'Descrizione del Video'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>e('textarea', { id: 'video-desc', className: 'form-control description-textarea', onChange: (ev) =&gt; setDescription(ev.target.value), disabled: isLoading })</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('div', { className: 'step-navigation' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>e('button', { className: 'btn btn--primary', onClick: onNext, disabled: isLoading }, isLoading ? 'Generazione...' : 'Genera Sceneggiatura')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function ScriptReviewStep({ clips, onNext }) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Semplificato per questo test</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>return e(React.Fragment, null,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('h2', {className: 'step-title'}, 'Revisiona Sceneggiatura'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('div', {className: 'script-clips'},<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>clips.map(clip =&gt; e('div', {key: clip.id, className: 'card'}, `${clip.id}: ${clip.text}`))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e('div', { className: 'step-navigation' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>e('button', { className: 'btn btn--primary', onClick: onNext }, 'Genera Video')</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>function VideoGeneratorApp() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const [currentStep, setCurrentStep] = useState(1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const [videoDescription, setVideoDescription] = useState("");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const [scriptClips, setScriptClips] = useState([]);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const [isLoading, setIsLoading] = useState(false);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const handleGenerateScript = async () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (!videoDescription) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>setIsLoading(true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const clips = await callGeminiAPI(videoDescription);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>setIsLoading(false);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>if (clips) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setScriptClips(clips);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setCurrentStep(2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const handleStartGeneration = () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert("La generazione video è temporaneamente disabilitata in questa versione di test.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>callKlingAPI("test"); // Chiama la funzione disabilitata</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return e('div', { className: 'video-generator-app' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>e('header', { className: 'app-header' }, e('h1', { className: 'app-title' }, 'Generatore Video AI')),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>e('main', { className: 'container' },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentStep === 1 &amp;&amp; e(VideoDescriptionStep, { setDescription: setVideoDescription, onNext: handleGenerateScript, isLoading: isLoading }),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>currentStep === 2 &amp;&amp; e(ScriptReviewStep, { clips: scriptClips, onNext: handleStartGeneration })</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const domContainer = document.querySelector('#root');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const root = ReactDOM.createRoot(domContainer);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>root.render(e(VideoGeneratorApp));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
